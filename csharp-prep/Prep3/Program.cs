@@ -4,8 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Random randomGenerator = new Random();
-        int magicNumber = randomGenerator.Next(1, 101);
+        Random randomNumber = new Random();
+        int magicNumber = randomNumber.Next(1, 101);
 
         int guess = -1;
 
@@ -29,7 +29,7 @@ class Program
                 string playAgain = Console.ReadLine();
                 if (playAgain == "y")
                 {
-                    magicNumber = randomGenerator.Next(1, 101);
+                    magicNumber = randomNumber.Next(1, 101);
                     guess = -1;
                 }
                 else
