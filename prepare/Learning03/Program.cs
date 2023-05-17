@@ -4,31 +4,21 @@ class Program
 {
     static void Main(string[] args)
     {
-       
-        Random randomGenerator = new Random();
-        int magicNumber = randomGenerator.Next(1, 101);
+        Fraction f1 = new Fraction();
+        Console.WriteLine(f1.GetFractionString());
+        Console.WriteLine(f1.GetDecimalValue());
 
-        int guess = -1;
+        f1.Numerator = 3;
+        f1.Denominator = 4;
+        Console.WriteLine(f1.GetFractionString());
+        Console.WriteLine(f1.GetDecimalValue());
 
-        // We could also use a do-while loop here...
-        while (guess != magicNumber)
-        {
-            Console.Write("What is your guess? ");
-            guess = int.Parse(Console.ReadLine());
+        Fraction f2 = new Fraction(5);
+        Console.WriteLine(f2.GetFractionString());
+        Console.WriteLine(f2.GetDecimalValue());
 
-            if (magicNumber > guess)
-            {
-                Console.WriteLine("Higher");
-            }
-            else if (magicNumber < guess)
-            {
-                Console.WriteLine("Lower");
-            }
-            else
-            {
-                Console.WriteLine("You guessed it!");
-            }
-
-        }                    
+        Fraction f3 = new Fraction(1, 5);
+        Console.WriteLine(f3.GetFractionString());
+        Console.WriteLine(f3.GetDecimalValue());
     }
 }
